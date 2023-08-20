@@ -26,7 +26,7 @@
 struct fmt
 { /* Structure to hold format specifier and associated function */
 	char fmt; /* The format specifier */
-	int (*fn)(va_list, char[], int, int, int, int,);
+	int (*fn)(va_list, char[], int, int, int, int);
 };
 
 /**
