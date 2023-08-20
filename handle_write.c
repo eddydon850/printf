@@ -189,7 +189,7 @@ int write_unsgnd(int is_negative, int ind, char buffer[], int flags,
 		}
 		else
 		{
-			return (write(1, &buffer[0], i) + write(1, &buffer[ind], length));
+			return (write(1, &buffer[0], j) + write(1, &buffer[ind], length));
 		}
 	}
 
@@ -228,7 +228,7 @@ int write_pointer(char buffer[], int ind, int length, int width, int flags,
 				buffer[--ind] = extra_c;
 			return (write(1, &buffer[ind], length) + write(1, &buffer[3], j - 3));
 		}
-		else if (!(flags & F_MINUS) & padd == ' ')
+		else if (!(flags & F_MINUS) && padd == ' ')
 		{
 			buffer[--ind] = 'x';
 			buffer[--ind] = '0';
@@ -252,3 +252,4 @@ int write_pointer(char buffer[], int ind, int length, int width, int flags,
 	if (extra_c)
 		buffer[--ind] = extra_c;
 	return (write(1, &buffer[ind], BUFF_SIZE - ind - 1));
+}
