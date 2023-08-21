@@ -15,7 +15,7 @@
 
 /* The "sizes" I used */
 #define S_LONG 2
-#define S_HORT 1
+#define S_SHORT 1
 
 /**
  * struct fmt - Format and associated function
@@ -109,7 +109,7 @@ int is_printable(char);
 int append_hexa_code(char, char[], int);
 int is_digit(char);
 
-long int coonvert_size_number(long int num, int size);
+long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
 
 #endif

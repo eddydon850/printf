@@ -67,7 +67,7 @@ long int convert_size_number(long int num, int size)
 { /* Convert a number to the specified size using casting */
 	if (size == S_LONG)
 		return (num);
-	else if (size == S_HORT)
+	else if (size == S_SHORT)
 		return ((short)num);
 
 	return ((int)num);
@@ -84,7 +84,7 @@ long int convert_size_unsgnd(unsigned long int num, int size)
 { /* Convert an unsigned number to the specified size using casting */
 	if (size == S_LONG)
 		return (num);
-	else if (size == S_HORT)
+	else if (size == S_SHORT)
 		return ((unsigned short)num);
 
 	return ((unsigned int)num);
