@@ -1,1 +1,1 @@
-Team project on printf with @edzordzinam && @edward
+Team project on printf with @edzordzinam & edward
